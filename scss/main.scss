@@ -1,0 +1,141 @@
+$sariq: #EC6C21;
+$kok: #006eeb;
+$oq: #FFFFFF;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+@mixin button-mixin() {
+    gap: 6px;
+    display: flex;
+    align-items: center;
+    background-color: $sariq;
+    font-weight: 500;
+    line-height: 20px;
+    color: $oq;
+    border: none;
+    padding: 18px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.main {
+    width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 24px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-href {
+    color: #002959;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-href:hover {
+    color: $kok;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.login-both {
+    @include button-mixin()
+}
+
+.login-both:hover {
+    background-color: #934417;
+}
+
+#select {
+    border: none;
+    background-color: transparent;
+    color: #002959;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../images/bg-hero.png);
+    background-repeat: no-repeat;
+    background-position: right 12% bottom 88%;
+    position: relative;
+
+    .h2 {
+        margin-top: 100px;
+        width: 982px;
+        font-weight: 600;
+        font-size: 61px;
+        line-height: 70px;
+        text-align: center;
+        color: #002959;
+        z-index: -1;
+        text-transform: capitalize;
+    }
+
+    .paragraph {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    line-height: 28px;
+    font-size: 20px;
+    text-align: center;
+    color: #002959;
+    width: 636px;
+    text-transform: capitalize;
+    }
+}
+
+.bg-png {
+    width: 212px;
+    height: 212px;
+    background-repeat: no-repeat;
+    background-image: url(../images/bg-hero-2.png);
+    position: absolute;
+    left: 240px;
+    bottom: 511px;
+}
+
+.bg-line {
+    width: 1440px;
+    height: 428px;
+    background-image: url(../images/bg-line.png);
+    margin-top: -425px;
+    margin-right: 79px;
+    z-index: -1;
+}
